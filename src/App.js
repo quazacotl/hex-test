@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import RegisterPage from "./pages/RegisterPage";
+import AuthPage from "./pages/AuthPage";
+import MainPage from "./pages/MainPage";
+import {createContext, useEffect, useState} from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import {ToastContainer} from "react-toastify";
+
+export const appContext = createContext({
+    authenticated: false,
+    setAuthenticated: (state) => {},
+});
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [authenticated, setAuthenticated] = useState(false);
+
+    useEffect(() => {
+        if (localStorage.getItem('token')) setAuthenticated(true)
+    }, [])
+
+    return (
+      <appContext.Provider value={{ authenticated, setAuthenticated}}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<MainPage />}/>
+              <Route path="/register" element={<RegisterPage />}/>
+              <Route path="/auth" element={<AuthPage />}/>
+            </Routes>
+            <ToastContainer />
+          </BrowserRouter>
+      </appContext.Provider>
+    );
 }
 
 export default App;
