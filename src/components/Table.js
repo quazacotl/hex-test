@@ -83,12 +83,12 @@ const Table = ({links, filters, setFilters, updateLinks}) => {
                             <div className={'w-full h-full flex gap-4 justify-center items-center'}>
                                 <div>Фильтр</div>
                                 <div className={'flex flex-col'}>
-                                    <IconContext.Provider value={{ className: filters.shortLinkStatus === 'asc_short' ? "text-black" : 'text-gray-600/50' }}>
+                                    <IconContext.Provider value={{ className: filters.shortLinkStatus === 'asc_short' ? "text-green-500" : 'text-gray-600/50' }}>
                                         <div className={'cursor-pointer'} onClick={() => handleFilter('shortLink', 'asc_short')}>
                                             <IoIosArrowUp/>
                                         </div>
                                     </IconContext.Provider>
-                                    <IconContext.Provider value={{ className: filters.shortLinkStatus === 'desc_short' ? "text-black" : 'text-gray-600/50' }}>
+                                    <IconContext.Provider value={{ className: filters.shortLinkStatus === 'desc_short' ? "text-green-500" : 'text-gray-600/50' }}>
                                         <div className={'cursor-pointer'} onClick={() => handleFilter('shortLink', 'desc_short')}>
                                             <IoIosArrowDown/>
                                         </div>
@@ -100,12 +100,12 @@ const Table = ({links, filters, setFilters, updateLinks}) => {
                             <div className={'w-full h-full flex gap-4 justify-center items-center'}>
                                 <div>Фильтр</div>
                                 <div className={'flex flex-col'}>
-                                    <IconContext.Provider value={{ className: filters.linkStatus === 'asc_target' ? "text-black" : 'text-gray-600/50' }}>
+                                    <IconContext.Provider value={{ className: filters.linkStatus === 'asc_target' ? "text-green-500" : 'text-gray-600/50' }}>
                                         <div className={'cursor-pointer'} onClick={() => handleFilter('link', 'asc_target')}>
                                             <IoIosArrowUp/>
                                         </div>
                                     </IconContext.Provider>
-                                    <IconContext.Provider value={{ className: filters.linkStatus === 'desc_target' ? "text-black" : 'text-gray-600/50' }}>
+                                    <IconContext.Provider value={{ className: filters.linkStatus === 'desc_target' ? "text-green-500" : 'text-gray-600/50' }}>
                                         <div className={'cursor-pointer'} onClick={() => handleFilter('link', 'desc_target')}>
                                             <IoIosArrowDown/>
                                         </div>
@@ -117,12 +117,12 @@ const Table = ({links, filters, setFilters, updateLinks}) => {
                             <div className={'w-full h-full flex gap-4 justify-center items-center'}>
                                 <div>Фильтр</div>
                                 <div className={'flex flex-col'}>
-                                    <IconContext.Provider value={{ className: filters.countStatus === 'asc_counter' ? "text-black" : 'text-gray-600/50' }}>
+                                    <IconContext.Provider value={{ className: filters.countStatus === 'asc_counter' ? "text-green-500" : 'text-gray-600/50' }}>
                                         <div className={'cursor-pointer'} onClick={() => handleFilter('count', 'asc_counter')}>
                                             <IoIosArrowUp/>
                                         </div>
                                     </IconContext.Provider>
-                                    <IconContext.Provider value={{ className: filters.countStatus === 'desc_counter' ? "text-black" : 'text-gray-600/50' }}>
+                                    <IconContext.Provider value={{ className: filters.countStatus === 'desc_counter' ? "text-green-500" : 'text-gray-600/50' }}>
                                         <div className={'cursor-pointer'} onClick={() => handleFilter('count', 'desc_counter')}>
                                             <IoIosArrowDown/>
                                         </div>

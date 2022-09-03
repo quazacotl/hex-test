@@ -3,67 +3,26 @@
 
 ## Тестовое задание на вакансию Junior Frontend Developer
 
-In the project directory, you can run:
+Рабочий проект можно посмотреть по ссылке: [http://hex-links.na4u.ru](http://hex-links.na4u.ru)
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Запуск приложения в режиме разработки.\
+Откройте [http://localhost:3000](http://localhost:3000) для просмотря в браузере.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+***
+Для запуска в докер контейнере создайте образ командой: 
+### `docker build -t short-links .`
 
-### `npm test`
+Затем запустите контейнер командой:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `docker run -it --rm -p 3001:3000 short-links`
 
-### `npm run build`
+и откройте браузер по аодресу: [http://localhost:3001](http://localhost:3001)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+На сервисе можно зарегистрироваться, авторизоваться зарегистрированному пользователю, которому доступен полный функцинал, который включает в себя возможность сокращения любый ссылок, а также просмотр списка всех сокращённых ссылок, сгенерированных пользователем.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Для списка ссылок поддерживается пагинация и фильтрация по нескольким параметрам.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
